@@ -1,8 +1,12 @@
-
+import Favourite from "./components/Favourite/Favourite"
+import Meals from "./components/Meals/Meals"
+import Search from "./components/Search/Search"
 function App() {
   return (
     <>
-    <h1>Mohammad Mahabub Alam</h1>
+    {/* <Favourite /> */}
+    <Search />
+    <Meals />
     </>
   )
 }
