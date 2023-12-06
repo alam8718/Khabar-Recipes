@@ -12,7 +12,7 @@ function Meals() {
   //* second line is basically destructuring the meals from the context
   //! const context = useContext(AppContext)
   //!  const {meals} = context
-  //--------------------------------------------------------------------------
+  //------------------------------------------------------------------------
 
   if (meals.length < 1) {
     return (
@@ -32,7 +32,7 @@ function Meals() {
           <img src={loadingGif} width={100} alt="loading image " />
         </div>
       ) : (
-        <div className="my-20  container mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="my-20 px-4 container mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {meals.map((meal) => {
             const {idMeal, strMeal: title, strMealThumb: image} = meal;
 
@@ -49,7 +49,7 @@ function Meals() {
                 <div className="flex justify-between mx-5">
                   <h1 className="text-xl">{title}</h1>
                   <button
-                    onClick={()=> addToFav(idMeal)}
+                    onClick={() => addToFav(idMeal)}
                     className=" hover:scale-90 duration-300">
                     <AiTwotoneLike size={30} />
                   </button>

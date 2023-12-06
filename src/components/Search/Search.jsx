@@ -24,7 +24,7 @@ function Search() {
 
   return (
     <>
-      <div className="my-8 container mx-auto">
+      <div className="my-5 pl-4 container mx-auto">
         <form onSubmit={handleSubmit}>
           <input
             type="text"

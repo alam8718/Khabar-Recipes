@@ -7,6 +7,9 @@ function App() {
   const {showModal, favourites} = useGlobalContext();
   return (
     <>
+      <div className="container mx-auto p-3 ">
+        <img src="logo.png" alt="" />
+      </div>
       <Search />
       {favourites.length > 0 && <Favourite />}
       <Meals />
