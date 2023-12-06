@@ -4,7 +4,7 @@ import {AiTwotoneLike} from "react-icons/ai";
 import loadingGif from "../Meals/Walk.gif";
 
 function Meals() {
-  const {meals, loading} = useGlobalContext();
+  const {meals, loading, selectMeal, addToFav} = useGlobalContext();
 
   //--------------------------------------------------------------------------
   //* if we don't use custom hook than we have to write these 2 lines
@@ -41,15 +41,18 @@ function Meals() {
                 key={idMeal}
                 className="bg-gray-200/80 shadow-lg pb-4 rounded-xl  flex flex-col  gap-3 ">
                 <img
+                  onClick={() => selectMeal(idMeal)}
                   src={image}
                   className="w-full h-[300px] lg:h-[350px] rounded-lg overflow-hidden  "
                   alt="meal image"
                 />
                 <div className="flex justify-between mx-5">
                   <h1 className="text-xl">{title}</h1>
-                  <a href="#" className="hover:scale-90 duration-300">
+                  <button
+                    onClick={()=> addToFav(idMeal)}
+                    className=" hover:scale-90 duration-300">
                     <AiTwotoneLike size={30} />
-                  </a>
+                  </button>
                 </div>
               </div>
             );

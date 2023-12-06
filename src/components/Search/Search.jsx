@@ -8,12 +8,19 @@ function Search() {
   const handleChange = (e) => {
     setText(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text) {
       setSearchValue(text);
     }
   };
+
+  const handleRandomMeal = ()=>{
+    setSearchValue("")
+    setText("")
+    fetchRandomMeal()
+  }
 
   return (
     <>
@@ -32,7 +39,7 @@ function Search() {
             Search
           </button>
           <button
-            onClick={fetchRandomMeal}
+            onClick={handleRandomMeal}
             className="px-4 py-2 mx-3 bg-purple-400 rounded-md hover:bg-purple-500 duration-300"
             type="button">
             Surprise ME !!!
